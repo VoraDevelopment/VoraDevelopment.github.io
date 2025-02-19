@@ -25,10 +25,23 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
             overflow-x: hidden;
             position: relative;
         }
+
+        /* Floating Abstract Shapes */
+        .floating-shape {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 0, 255, 0.5), transparent);
+            border-radius: 50%;
+            filter: blur(100px);
+            z-index: -1;
+        }
+
+        .shape1 { top: 10%; left: -100px; }
+        .shape2 { bottom: 20%; right: -100px; background: radial-gradient(circle, rgba(0, 255, 255, 0.5), transparent); }
 
         /* Top Navigation Bar */
         .navbar {
@@ -66,18 +79,18 @@
             opacity: 0.7;
         }
 
-        /* Centered Content */
-        .content {
+        /* Hero Section */
+        .hero {
             text-align: center;
-            margin-top: 100px;
+            margin-top: 140px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 70vh;
+            height: 60vh;
         }
 
-        .content h1 {
+        .hero h1 {
             font-size: 3rem;
             font-weight: bold;
             margin-bottom: 20px;
@@ -110,6 +123,47 @@
             height: 24px;
         }
 
+        /* Cards Section */
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+            justify-content: center;
+            max-width: 1000px;
+            padding-bottom: 80px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: left;
+            width: 320px;
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
         /* Bottom Navigation Bar */
         .bottom-bar {
             position: fixed;
@@ -128,6 +182,10 @@
 </head>
 <body>
 
+    <!-- Floating Abstract Shapes -->
+    <div class="floating-shape shape1"></div>
+    <div class="floating-shape shape2"></div>
+
     <!-- Top Navigation Bar -->
     <nav class="navbar">
         <img src="https://via.placeholder.com/150x40?text=Vora+Logo" alt="Vora Logo">
@@ -139,8 +197,8 @@
         </div>
     </nav>
 
-    <!-- Main Content -->
-    <div class="content">
+    <!-- Hero Section -->
+    <div class="hero">
         <h1>Vora Development</h1>
 
         <!-- Discord Sign-In Button -->
@@ -148,6 +206,25 @@
             <img src="https://upload.wikimedia.org/wikipedia/en/6/60/Discord_logo_2015.svg" alt="Discord Logo">
             Sign in with Discord
         </button>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="cards-container">
+        <div class="card">
+            <img src="https://source.unsplash.com/320x150/?technology" alt="Tech Image">
+            <h2>Innovative Solutions</h2>
+            <p>We create cutting-edge technology on Roblox, providing next-level experiences.</p>
+        </div>
+        <div class="card">
+            <img src="https://source.unsplash.com/320x150/?abstract" alt="Abstract Image">
+            <h2>Custom Development</h2>
+            <p>Our team specializes in custom game mechanics, AI solutions, and modern UI.</p>
+        </div>
+        <div class="card">
+            <img src="https://source.unsplash.com/320x150/?coding" alt="Coding Image">
+            <h2>AI-Powered Systems</h2>
+            <p>Utilizing AI to automate processes and improve gameplay experiences.</p>
+        </div>
     </div>
 
     <!-- Bottom Bar -->
