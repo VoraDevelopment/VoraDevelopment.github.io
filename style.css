@@ -2,71 +2,42 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    background: linear-gradient(45deg, #ff66b2, #000000);
+    background: radial-gradient(circle, #000000, #ff66b2);
     height: 100vh;
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: center;
+    color: white;
 }
 
-/* Header */
-header {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
+/* Main Container */
+.container {
+    text-align: center;
+    max-width: 600px;
 }
 
-.logo img {
-    width: 40px; /* Adjust for your logo */
+/* Title */
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
-/* Navigation */
-nav {
-    position: relative;
-}
-
-.menu-icon {
-    font-size: 24px;
+/* Discord Button */
+.discord-btn {
+    background-color: #5865F2;
+    color: white;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    color: white;
-    display: none;
+    transition: 0.3s;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-
-ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-/* Responsive Menu */
-@media (max-width: 768px) {
-    .menu-icon {
-        display: block;
-    }
-    ul {
-        display: none;
-        position: absolute;
-        top: 50px;
-        right: 10px;
-        background: rgba(0, 0, 0, 0.8);
-        padding: 10px;
-        flex-direction: column;
-    }
-    ul li {
-        margin: 10px 0;
-    }
+.discord-btn:hover {
+    background-color: #4752C4;
 }
