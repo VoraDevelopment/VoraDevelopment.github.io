@@ -3,20 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Roblox Dev Site</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Vora Development</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Vora</h1>
-        <button class="discord-btn" onclick="loginWithDiscord()">Sign in with Discord</button>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Leaders in Innovating Solutions on Roblox</h1>
+        <p>Join us in pushing the boundaries of creativity and technology.</p>
+        <button class="discord-btn">Sign in with Discord</button>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="cards-container">
+        <div class="card">
+            <h2>AI Grading</h2>
+            <p>Our AI can automatically grade text-based answers, ensuring accuracy and fairness.</p>
+        </div>
+        <div class="card">
+            <h2>Automation</h2>
+            <p>Seamlessly automate tasks and workflows, saving time and effort.</p>
+        </div>
+        <div class="card">
+            <h2>Security</h2>
+            <p>We implement advanced security measures to protect your data.</p>
+        </div>
+    </section>
+
+    <!-- Bottom Navigation Bar -->
+    <div class="bottom-nav">
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
     </div>
 
-    <script>
-        function loginWithDiscord() {
-            window.location.href = "https://discord.com/oauth2/authorize?client_id=YOUR_CLIENT_ID&response_type=code&scope=identify";
-        }
-    </script>
 </body>
 </html>
