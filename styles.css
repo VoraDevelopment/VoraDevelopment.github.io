@@ -32,9 +32,41 @@ section {
     padding: 2rem;
 }
 
+section#home {
+    background-color: #f4f4f4;
+}
+
+section#overview,
+section#testimonials,
+section#plans {
+    background-color: #e9e9e9;
+}
+
+section#cta {
+    background-color: #0044cc;
+    color: #fff;
+    text-align: center;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #ff9900;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
 footer {
     background-color: #003399; /* Another shade of blue */
     padding: 1rem;
     text-align: center;
     color: #fff;
+}
+
+footer .social-links a {
+    color: #fff;
+    margin: 0 0.5rem;
+    text-decoration: none;
 }
